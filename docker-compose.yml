@@ -1,0 +1,17 @@
+version: '3.8'
+
+
+services:
+  web:
+    container_name: setup-web
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    networks:
+      - primeira-network
+
+networks:
+  primeira-network:
+    name: primeira-network
+    driver: bridge
